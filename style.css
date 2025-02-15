@@ -1,0 +1,576 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Poppins:wght@400;700&display=swap');
+
+:root {
+	--fonte-principal: "Poppins", serif;
+	--fonte-secundaria: "Lobster", serif;
+	--cor-principal: #747dff;
+	--cor-principal-alpha: #747dff3c;
+	--cor-destaque: #ffad32;
+	--cor-gradiente-01: #ffe7c2;
+	--cor-gradiente-02: #bdacff;
+	--cor-01: #f9f9f9;
+	--cor-02: #b8c0c7;
+	--cor-03: #767f86;
+	--cor-04: #3c4852;
+	--cor-05: #00000043;
+	--sombra: 0 .3rem .4rem .1rem var(--cor-05);
+}
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	scroll-behavior: smooth;
+}
+
+html {
+	font-family: var(--fonte-principal);
+	font-size: 18px;
+}
+
+body {
+	color: var(--cor-04);
+}
+
+nav {
+	position: fixed;
+	top: 0;
+	left: 0;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+	width: 100%;
+	letter-spacing: .1rem;
+	z-index: 10;
+	color: var(--cor-01);
+	background-color: var(--cor-principal-alpha);
+	padding: .6rem 3rem;
+}
+
+.logo {
+	font-family: var(--fonte-secundaria);
+	font-size: 1.5rem;
+}
+
+.menu a, .drop-content a {
+	text-decoration: none;
+	color: var(--cor-01);
+	font-weight: 700;
+	transition: .5s;
+	padding: .6rem 1rem;
+}
+
+.menu a:hover, .drop-content a:hover {
+	color: var(--cor-destaque);
+}
+
+header {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	height: 96vh;
+	background-image: url('img/banner.jpg');
+	background-position: 50% 50%;
+	background-size: cover;
+}
+
+header div {
+	width: 100%;
+}
+
+.titulo {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100%;
+	font-size: 2rem;
+	letter-spacing: .1rem;
+	word-spacing: .5rem;
+	font-weight: 700;
+	color: var(--cor-01);
+	text-shadow: .2rem 0 .2rem var(--cor-04);
+}
+
+.booking {
+	background-color: var(--cor-principal-alpha);
+	padding: .8rem 3rem;
+}
+
+.booking form {
+	display: flex;
+	align-items: end;
+	color: var(--cor-03);
+	background-color: var(--cor-01);
+	border-radius: .2rem;
+	padding: 1rem 1.4rem;
+}
+
+form label {
+	display: block;
+}
+
+form input {
+	width: 80%;
+	font-size: 1rem;
+	border: solid .1rem var(--cor-02);
+	border-radius: .3rem;
+	padding: .5rem;
+}
+
+button {
+	font-size: 1rem;
+	font-weight: 700;
+	border: none;
+	border-radius: .5rem;
+	transition: .3s;
+	color: var(--cor-01);
+	background-color: var(--cor-destaque);
+	padding: .6rem 1.6rem;
+}
+
+button:hover {
+	cursor: pointer;
+	background-color: var(--cor-principal);
+}
+
+section {
+	min-height: 100vh;
+	padding: 6rem;
+	margin: 2.5rem auto;
+}
+
+.passeios {
+	display: flex;
+}
+
+.passeios h1 {
+	font-family: var(--fonte-secundaria);
+	color: var(--cor-principal);
+}
+
+.passeios hr {
+	width: 15rem;
+	border: 1rem var(--cor-destaque);
+	border-radius: 1rem;
+	margin: 1rem 0;
+}
+
+.passeios p {
+	margin: 1rem 0;
+}
+
+.info-passeio {
+	text-align: justify;
+	flex: 1;
+	padding-right: 3rem;
+}
+
+.fotos-passeio {
+	height: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1rem;
+	flex: 1;
+}
+
+.foto {
+	width: calc(50% - .5rem);
+	border: solid .6rem var(--cor-01);
+	border-radius: .5rem;
+	box-shadow: var(--sombra);
+}
+
+.foto img {
+	width: 100%;
+	display: flex;
+}
+
+.destinos {
+	background-image: linear-gradient(50deg, var(--cor-gradiente-01), var(--cor-gradiente-02));
+}
+
+.destinos h1 {
+	font-family: var(--fonte-secundaria);
+	text-align: center;
+	color: var(--cor-principal);
+	padding-bottom: 1rem;
+}
+
+.grupo-destinos {
+	display: grid;
+	grid-template-columns: auto auto auto;
+	gap: 3rem 1.2rem;
+	padding: 0 3rem;
+}
+
+.card-destino {
+	display: flex;
+	flex-direction: column;
+	border-radius: .5rem;
+	background-color: var(--cor-01);
+	box-shadow: var(--sombra);
+	padding: .8rem;
+}
+
+.card-destino img {
+	height: 100%;
+	width: 100%;
+	border-radius: .3rem;
+}
+
+.card-destino > div {
+	padding: 1rem;
+}
+
+.card-destino span {
+	font-size: 1.2rem;
+	font-weight: 700;
+}
+
+.card-destino p {
+	text-align: justify;
+	color: var(--cor-03);
+	margin: 1rem 0;
+}
+
+.valor {
+	display: flex;
+	align-items: baseline;
+	justify-content: end;
+	margin: 1rem auto;
+}
+
+.valor div {
+	display: flex;
+	align-items: end;
+	justify-content: start;
+}
+
+.valor span {
+	font-size: .8rem;
+	text-decoration: line-through;
+	color: var(--cor-03);
+	margin-left: .5rem;
+}
+
+.card-btn {
+	text-align: right;
+}
+
+.avaliacoes {
+	min-height: 50vh;
+	width: 75%;
+	text-align: center;
+	padding: 6rem 3rem 2rem;
+	margin: 1rem auto;
+}
+
+.avaliacoes h1 {
+	font-family: var(--fonte-secundaria);
+	color: var(--cor-principal);
+}
+
+.avaliacoes p {
+	color: var(--cor-03);
+	margin: 1rem auto;
+}
+
+.avaliacoes img {
+	width: 10rem;
+	border: .2rem solid var(--cor-destaque);
+	border-radius: 50%;
+	outline: none;
+	background-color: var(--cor-destaque);
+}
+
+.avaliacoes span {
+	font-weight: 700;
+}
+
+.carrossel {
+	position: relative;
+	padding: 0 5rem;
+	margin: auto;
+}
+
+.carrossel button {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	border: none;
+	cursor: pointer;
+	transition: .3s;
+	color: var(--cor-01);
+	background-color: var(--cor-05);
+	padding: .5rem;
+}
+
+.carrossel button:hover {
+	background-color: var(--cor-03);
+}
+
+.anterior {
+	left: 0;
+}
+
+.proximo {
+	right: 0;
+}
+
+footer {
+	display: flex;
+	font-size: .8rem;
+	color: var(--cor-02);
+	background-color: var(--cor-04);
+	padding: 2rem 5rem;
+}
+
+footer div {
+	flex: 1;
+	padding: 0 .3rem;
+}
+
+footer h3 {
+	text-transform: uppercase;
+	margin-bottom: 1rem;
+}
+
+.input-group {
+	display: flex;
+	gap: .5rem;
+	margin: 1rem 0 1.5rem;
+}
+
+footer input {
+	width: 100%;
+	letter-spacing: .1rem;
+	border: none;
+	border-radius: .1rem;
+	color: var(--cor-04);
+	background-color: var(--cor-01);
+	padding: .5rem;
+}
+
+footer button {
+	border-radius: .3rem;
+	padding: .3rem 1.4rem;
+}
+
+footer hr {
+	margin: 1rem 0;
+}
+
+.empresa p {
+	margin: 2rem 0;
+}
+
+.empresa span {
+	display: block;
+	font-weight: 700;
+}
+
+.rede-social {
+	display: flex;
+	gap: 1rem;
+}
+
+.rede-social i {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 2rem;
+	width: 2rem;
+	font-size: 1.2rem;
+	border: solid .15rem;
+	border-radius: 50%;
+	cursor: pointer;
+	transition: .3s;
+}
+
+.rede-social i:hover {
+	color: var(--cor-destaque);
+	border-color: var(--cor-destaque);
+}
+
+.rodape {
+	height: 3rem;
+	width: 100%;
+	background-color: var(--cor-principal);
+}
+
+.drop-menu {
+	cursor: pointer;
+	padding: .5rem 1rem;
+}
+
+.drop-button {
+	padding: 0 0 .25rem;
+	background-color: inherit;
+}
+
+.barra {
+	height: .28rem;
+	width: 2rem;
+	transition: .3s;
+	border-radius: .2rem;
+	background-color: var(--cor-01);
+	margin-top: .3rem;
+}
+
+.drop-content {
+	position: absolute;
+	top: 3rem;
+	right: 0;
+	display: none;
+	z-index: 1;
+	background-color: var(--cor-principal-alpha);
+	box-shadow: var(--sombra);
+}
+
+.drop-content a {
+	display: block;
+}
+
+.drop-content a:hover {
+	color: var(--cor-destaque);
+}
+
+.drop-menu:hover .drop-content{
+	display: block;
+}
+
+@media screen and (min-width: 0px) {
+	nav {
+		/* background-color: var(--cor-principal); */
+		background-color: #c35858;
+		padding: 0 0 0 1rem;
+	}
+
+	.drop-content {
+		background-color: var(--cor-principal);
+	}
+
+	.menu {
+		display: none;
+	}
+
+	.drop-menu {
+		display: block;
+	}
+
+	.titulo {
+		font-size: 1.8rem;
+	}
+
+	.booking {
+		padding: .8rem;
+	}
+
+	.booking form {
+		flex-direction: column;
+	}
+
+	form input {
+		width: 100%;
+		margin-bottom: .6rem;
+	}
+
+	section {
+		padding: 6rem 2rem;
+	}
+
+	.passeios {
+		flex-direction: column;
+	}
+
+	.fotos-passeio {
+		margin-top: 3rem;
+	}
+
+	.foto {
+		width: 100%;
+	}
+
+	.grupo-destinos {
+		display: flex;
+		flex-direction: column;
+		padding: 0;
+	}
+
+	.avaliacoes {
+		width: 100%;
+	}
+
+	.carrossel {
+		padding: 0;
+	}
+
+	footer {
+		flex-direction: column;
+		padding: 2rem;
+	}
+
+	footer h3 {
+		margin-top: 2rem;
+	}
+
+	.empresa p {
+		margin: 1rem 0;
+	}
+}
+
+@media screen and (min-width: 576px) {
+	section {
+		padding: 6rem 4rem;
+	}
+
+	nav {
+		background-color: #89ac68;
+	}
+}
+
+@media screen and (min-width: 768px) {
+	section {
+		padding: 6rem 2rem;
+	}
+
+	.booking {
+		padding: .8rem 3rem;
+	}
+
+	nav {
+		background-color: #9f9f9f;
+	}
+
+	.foto {
+		width: calc(50% - .5rem);
+	}
+
+	.grupo-destinos {
+		display: grid;
+		grid-template-columns: auto auto;
+		gap: 3rem 1.2rem;
+		padding: 0;
+	}
+
+	footer {
+		padding: 2rem 6rem;
+	}
+}
+
+@media screen and (min-width: 992px) {
+	nav {
+		background-color: var(--cor-principal-alpha);
+		background-color: #ac68a9;
+		padding: .6rem 3rem;
+	}
+
+	.menu {
+		display: block;
+	}
+
+	.drop-menu {
+		display: none;
+	}
+}
