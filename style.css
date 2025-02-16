@@ -45,7 +45,12 @@ nav {
 	z-index: 10;
 	color: var(--cor-01);
 	background-color: var(--cor-principal-alpha);
+	transition: background-color .5s ease;
 	padding: .6rem 3rem;
+}
+
+.navbar-solida {
+	background-color: var(--cor-principal);
 }
 
 .logo {
@@ -442,8 +447,7 @@ footer hr {
 
 @media screen and (min-width: 0px) {
 	nav {
-		/* background-color: var(--cor-principal); */
-		background-color: #c35858;
+		background-color: var(--cor-principal);
 		padding: 0 0 0 1rem;
 	}
 
@@ -524,10 +528,6 @@ footer hr {
 	section {
 		padding: 6rem 4rem;
 	}
-
-	nav {
-		background-color: #89ac68;
-	}
 }
 
 @media screen and (min-width: 768px) {
@@ -537,10 +537,6 @@ footer hr {
 
 	.booking {
 		padding: .8rem 3rem;
-	}
-
-	nav {
-		background-color: #9f9f9f;
 	}
 
 	.foto {
@@ -562,7 +558,6 @@ footer hr {
 @media screen and (min-width: 992px) {
 	nav {
 		background-color: var(--cor-principal-alpha);
-		background-color: #ac68a9;
 		padding: .6rem 3rem;
 	}
 
@@ -572,5 +567,64 @@ footer hr {
 
 	.drop-menu {
 		display: none;
+	}
+
+	.titulo {
+		font-size: 2rem;
+	}
+
+	.booking {
+		padding: .8rem 3rem;
+	}
+
+	.booking form {
+		flex-direction: row;
+		align-items: last baseline;
+	}
+
+	form input {
+		width: 80%;
+	}
+
+	section {
+		padding: 6rem 3rem;
+	}
+
+	.passeios {
+		flex-direction: row;
+	}
+
+	.info-passeio {
+		padding-right: 3rem;
+	}
+
+	.foto {
+		width: 100%;
+	}
+
+	.avaliacoes {
+		width: 75%;
+	}
+
+	footer {
+		flex-direction: row;
+	}
+
+	footer h3 {
+		margin-top: 0;
+	}
+}
+
+@media screen and (min-width: 1200px) {
+	.foto {
+		width: calc(50% - .5rem);
+	}
+
+	.grupo-destinos {
+		grid-template-columns: auto auto auto;
+	}
+
+	.carrossel {
+		padding: 0 5rem;
 	}
 }
